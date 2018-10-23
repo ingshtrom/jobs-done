@@ -7,6 +7,7 @@ import TasksPage from './containers/TasksPage';
 import SettingsPage from './containers/SettingsPage';
 import Sidebar from './components/Sidebar';
 import MainAppBar from './components/MainAppBar';
+import StatePersistence from './components/StatePersistence';
 
 const routeMap = {
   [routes.TASKS]: 'Tasks',
@@ -23,5 +24,6 @@ export default () => (
         <Redirect to={routes.TASKS} />
       </Switch>
     </Sidebar>
+    <StatePersistence />
   </App>
 );

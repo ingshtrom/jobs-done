@@ -5,7 +5,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import AssignmentIcon from '@material-ui/icons/Assignment';
-import TuneIcon from '@material-ui/icons/Tune';
+// import TuneIcon from '@material-ui/icons/Tune';
 import routes from '../constants/routes.json';
 
 export const mainListItems = (
@@ -19,13 +19,15 @@ export const mainListItems = (
   </NavLink>
 );
 
-export const secondaryListItems = (
-  <NavLink to={routes.SETTINGS}>
-    <ListItem button>
-      <ListItemIcon>
-        <TuneIcon />
-      </ListItemIcon>
-      <ListItemText primary="Settings" />
-    </ListItem>
-  </NavLink>
-);
+export const secondaryListItems = null;
+
+// export const secondaryListItems = (
+//   <NavLink to={routes.SETTINGS}>
+//     <ListItem button>
+//       <ListItemIcon>
+//         <TuneIcon />
+//       </ListItemIcon>
+//       <ListItemText primary="Settings" />
+//     </ListItem>
+//   </NavLink>
+// );

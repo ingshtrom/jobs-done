@@ -1,10 +1,14 @@
 // @flow
-import os from 'os';
+
 import type { Action, Settings } from '../types';
-import { UPDATE_SETTINGS } from '../actions/settings';
+import {
+  INIT_NEW_INSTANCE,
+  LOAD_SETTINGS,
+  UPDATE_SETTINGS
+} from '../actions/settings';
 
 const defaultState = {
-  saveLocation: os.homedir()
+  isLoaded: false
 };
 
 export default function settings(
@@ -16,6 +20,16 @@ export default function settings(
       return {
         ...state,
         ...action.settings
+      };
+    case LOAD_SETTINGS:
+      return {
+        ...state,
+        isLoaded: true
+      };
+    case INIT_NEW_INSTANCE:
+      return {
+        ...state,
+        isLoaded: true
       };
     default:
       return state;

@@ -25,5 +25,10 @@ export type Task = {
 // };
 
 export type Settings = {
-  saveLocation: string
+  isLoaded: boolean
+};
+
+export type PersistedData = {
+  settings?: ?Settings,
+  tasks: Array<Task>
 };
